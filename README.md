@@ -11,6 +11,20 @@ A simple Notes CRUD application built using Node.js, Express.js, MySQL, and EJS.
 - MySQL Database Integration
 - Method Override for PATCH and DELETE requests
 
+# Screenshots
+
+## Home Page
+
+![Home Page](assets/home.png)
+
+## Create Note
+
+![Create Note](assets/create.png)
+
+## Edit Note
+
+![Edit Note](assets/edit.png)
+
 ## Tech Stack
 
 - Node.js
