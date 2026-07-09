@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Notes App</h1>
+    <h2></h2>
+    <div class="notes-container">
+    <% for(let note of notes) { %>
+    <div class="note">
+            <h3 class="title"><%= note.title %></h3>
+            <p class="content"><b><%= note.content %></b></p>
+            <p class="time">Created at : <%= note.created_at %> </p>
+            <p class="time">Updated at : <%= note.updated_at %> </p>
+            <form action="/notes/<%= note.id %>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+            <form action="/notes/<%= note.id %>/edit" method="get"><button>
+                Edit
+            </button></form>
+    </div>
+    <% } %>
+    </div>
+    <br><br><br>
+    <form action="/notes/new" method="get">
+        <Button>Create New Note</Button>
+    </form>
+</body>
+</html>
